@@ -10,20 +10,20 @@ class DigitalClicker extends React.Component {
         }
     }
 
-
     handleClick = () => {
-        this.setState(previousState => {
-            return {
-                timesClicked: previousState.timesClicked + 1
-            }
+        let addTo = this.state.timesClicked + 1
+        this.setState({
+            timesClicked: addTo
         })
     }
+  
  
     render() {
         return(
-            <button
-            onClick={this.handleClick}
-            >{this.state.timesClicked}</button>
+          <div>
+              <button onClick={this.handleClick}>{this.state.timesClicked}</button>
+            
+          </div>
         )
     }
 
